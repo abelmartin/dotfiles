@@ -1,0 +1,2 @@
+/*jslint devel: true, sloppy: true, vars: true, white: true, nomen: true, maxerr: 50, indent: 2*/
+/*global Backbone:true, window:true, JPP:true, document:false, '_':false, '$':false*/

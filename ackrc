@@ -1,0 +1,6 @@
+--ignore-dir=vendor
+--type-add=ruby=.haml
+--type-add=ruby=.scss
+--type-add=ruby=.feature
+--type-add=ruby=.coffee
+--type-add=ruby=.jst
