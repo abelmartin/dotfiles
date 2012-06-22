@@ -56,16 +56,26 @@ alias gpo='git push origin'
 alias gpob="git push origin `git branch 2>/dev/null|cut -f2 -d\* -s|sed -e "s/^ *//g;"`"
 alias gco='git checkout'
 alias gcom='gco master'
-alias gcoc='gco backbone'
-alias gcam='git commit -am'
+
+#If I'm just commiting before pushing the code up, I want to do all of it in 1 action.
+function gacp()
+{
+  git add -A; 
+  git commit -m "$1";
+  git push;
+}
+
+#I don't delete tags often...but when I do, I use this.
+function gdt()
+{
+  git push origin :refs/tags/$1;
+}
 
 #Creates a new Git branch, pushes it to the remote repo, and checks it out.
 function gcn()
 {
   git branch $1;
   git push origin $1;
-#  git branch -D $1;
-#  git checkout --track -b $1 origin/$1;
   git branch --set-upstream $1 origin/$1;
   git checkout $1;
 }
