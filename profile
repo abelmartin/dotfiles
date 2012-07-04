@@ -2,10 +2,6 @@ if [ -f ~/.profile_private ]; then
   source ~/.profile_private
 fi
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-alias r187='rvm ruby-1.8.7-p334' #An easy way to use the version of 1.8.7 that i've already started working with
-
 # Display the current git branch that you're working on.
 export PS1='\[\033[00;35m\]\w\[\033[00m\][\d | \t]\[\033[01;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s`\[\033[00m\]$ '
 
@@ -99,6 +95,7 @@ alias srl='source ~/.profile && echo shell reloaded'
 alias psg='ps aux | grep' #Checking for processes made easy
 alias ulct='/usr/libexec/locate.updatedb' #Updates the 'locate' database on command.  This should happen automatically, but JIC.
 alias faf="find . -type f -iname "
+alias www='cd ~/Websites'
 
 #Easily run PRY with your rails env
 alias pryr='pry -r ./config/environment'
@@ -113,3 +110,6 @@ alias gph='git push heroku'
 # Deploys whatever branch you're currently in to staging.  The 'sed' command at the end strips out the leading space from the 'cut' command
 alias cds='cap deploy DEPLOY="staging" BRANCH="`git branch 2>/dev/null|cut -f2 -d\* -s|sed -e "s/^ *//g;"`"'
 alias cdp='env DEPLOY='PRODUCTION' cap deploy'
+
+# RVM
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
