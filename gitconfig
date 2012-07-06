@@ -1,0 +1,9 @@
+[user]
+	name = Abel Martin
+	email = abel@jinglepunks.com
+[push]
+	default = current
+[pull]
+	default = current
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
