@@ -52,6 +52,7 @@ alias gpo='git push origin'
 alias gpob="git push origin `git branch 2>/dev/null|cut -f2 -d\* -s|sed -e "s/^ *//g;"`"
 alias gco='git checkout'
 alias gcom='gco master'
+alias ggn='git grep -n'
 
 #If I'm just commiting before pushing the code up, I want to do all of it in 1 action.
 function gacp()
