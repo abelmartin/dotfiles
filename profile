@@ -95,8 +95,7 @@ alias srl='source ~/.profile && echo shell reloaded'
 alias psg='ps aux | grep' #Checking for processes made easy
 alias ulct='/usr/libexec/locate.updatedb' #Updates the 'locate' database on command.  This should happen automatically, but JIC.
 alias faf="find . -type f -iname "
-alias www='cd ~/Websites'
-
+alias myp="cd ~/MyProjects"
 #Easily run PRY with your rails env
 alias pryr='pry -r ./config/environment'
 
