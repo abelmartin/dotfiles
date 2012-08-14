@@ -88,7 +88,6 @@ alias rc='rails console'
 alias rss='rails console --sandbox'
 
 # Bash
-alias cdu='cd ..' #An easy way to move up in a directory
 alias ll='ls -laFGh'
 alias llg='ls -laFOG | xargs -0 grep -n'
 alias prf='sudo mvim ~/.profile'
@@ -101,8 +100,8 @@ alias www='cd ~/Websites'
 #Easily run PRY with your rails env
 alias pryr='pry -r ./config/environment'
 
-export MAGICK_HOME="/usr/local"
-PATH=/opt/local/bin:/opt/local/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mongodb/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/rvm/bin
+#export MAGICK_HOME="/usr/local"
+#PATH=/opt/local/bin:/opt/local/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mongodb/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/rvm/bin
 export NODE_PATH=/usr/local/lib/node_modules
 
 #Make pushing to heroku easy
