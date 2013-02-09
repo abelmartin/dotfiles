@@ -107,8 +107,9 @@ export NODE_PATH=/usr/local/lib/node_modules
 alias gph='git push heroku'
 
 # Deploys whatever branch you're currently in to staging.  The 'sed' command at the end strips out the leading space from the 'cut' command
-alias cds='cap deploy DEPLOY="staging" BRANCH="`git branch 2>/dev/null|cut -f2 -d\* -s|sed -e "s/^ *//g;"`"'
-alias cdp='env DEPLOY='PRODUCTION' cap deploy'
+#alias cds='cap deploy DEPLOY="staging" BRANCH="`git branch 2>/dev/null|cut -f2 -d\* -s|sed -e "s/^ *//g;"`"'
+alias cds='cap staging deploy'
+alias cdp='cap production deploy'
 
 # RVM
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
