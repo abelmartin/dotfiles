@@ -5,7 +5,48 @@
 " ack - 0.3.1 - http://www.vim.org/scripts/script.php?script_id=2572
 " nerdtree - 4.1.0 - http://www.vim.org/scripts/script.php?script_id=1658
 " bufexplorer - 7.2.8 - http://www.vim.org/scripts/script.php?script_id=42
-let mapleader=","
+
+" Time to keep the standard leader
+" let mapleader=","
+
+" Turn off those arrow keys
+"inoremap  <up><nop>
+"inoremap  <down><nop>
+"inoremap  <left><nop>
+"inoremap  <right><nop>
+"noremap   <up><nop>
+"noremap   <down><nop>
+"noremap   <left><nop>
+"noremap   <right><nop>
+
+nnoremap <Left> <nop>
+nnoremap <Right> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+
+vnoremap <Left> <nop>
+vnoremap <Right> <nop>
+vnoremap <Up> <nop>
+vnoremap <Down> <nop>
+
+vnoremap h <nop>
+vnoremap j <nop>
+vnoremap k <nop>
+vnoremap l <nop>
+"vnoremap - <nop>
+"vnoremap + <nop>
+
+nnoremap h <nop>
+nnoremap j <nop>
+nnoremap k <nop>
+nnoremap l <nop>
+"nnoremap - <nop>
+"nnoremap + <nop>
 
 set nocompatible
 
