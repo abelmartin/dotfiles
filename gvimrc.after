@@ -1,0 +1,7 @@
+color solarized 
+set guifont=Monaco:h18.00
+set cc=80
+set wildmode=list:longest
+set vb
+set guioptions=egmrt
+au BufNewFile,BufRead *.ejs set filetype=html
