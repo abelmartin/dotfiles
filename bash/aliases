@@ -1,0 +1,40 @@
+alias ..="cd .."
+alias s="sudo"
+alias l="ls -hal"
+alias ls="ls -Gp"
+alias ll="ls -laGp"
+alias df="df -h"
+alias du="du -h"
+alias grep="grep --color=auto"
+
+alias ws="cd ~/workspace"
+alias haw="cd ~/workspace/howaboutwe"
+alias cr="cd ~/workspace/chef-repo"
+alias coup="cd ~/workspace/couples"
+
+alias sc="script/console"
+alias be="bundle exec"
+alias bi="bundle install"
+alias u="bundle exec unicorn_rails -p 3000 -D"
+
+alias reset-authors="git commit --amend --reset-author -C head"
+
+alias gco="git checkout"
+alias gap="git add -p"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gst="git status"
+alias gc="git commit --verbose"
+alias gpr="git pull --rebase"
+alias gp="git push"
+alias gb="git branch"
+
+alias cfocus="bundle exec cucumber features/ --tags @focus"
+alias rfocus="bundle exec rspec spec/ -t focus"
+
+alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
+alias pconsole="bundle exec pry -r ./config/environment"
+
+alias servers="be knife rackspace server list"
