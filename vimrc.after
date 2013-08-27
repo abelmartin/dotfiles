@@ -1,0 +1,48 @@
+color vividchalk
+set guifont=Monaco:h18.00
+set vb
+au BufNewFile,BufRead *.ejs set filetype=html
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" set folding things
+set foldmethod=indent
+set nofoldenable
+set foldcolumn=1
+
+set nobackup
+set nowritebackup
+set history=50		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set incsearch		" do incremental searching
+set nohlsearch " disable long term highlighting for searches
+set scrolloff=3
+
+set cursorline " highlight current line
+set hidden " allow unsaved buffers
+
+set guifont=Monaco:h12 
+
+" Always display the status line
+set laststatus=2
+
+" use w!! to sudo :w  a file that we opened without su privs
+cmap w!! w !sudo tee % >/dev/null
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Maintaining the visual line selection after indenting with '>' or '<'
+vmap > >gv
+vmap < <gv
+
+ " Autoc-compile coffee script
+autocmd BufWritePost *.coffee silent CoffeeMake!
+
+" Insert a carrage return exactly where you are and moves to the start of that line.  The opposite of <Shift + j>
+map <leader>j i<CR><ESC>^
