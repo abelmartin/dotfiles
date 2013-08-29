@@ -1,33 +1,62 @@
+# apache
+alias apars='sudo apachectl graceful' #Graceful Apache restart
+alias apast='sudo apachectl stop'
+alias apago='sudo apachectl start'
+alias apaec='sudo mvim /etc/apache2/httpd.conf'
+alias apate='tail -f /private/var/log/apache2/error_log'
+alias apatl='tail -f /private/var/log/apache2/access_log'
+
+# bash
 alias ..="cd .."
 alias s="sudo"
 alias l="ls -hal"
 alias ls="ls -Gp"
 alias ll="ls -laGp"
+alias llg='ls -laFOG | xargs -0 grep -n'
 alias df="df -h"
 alias du="du -h"
 alias grep="grep --color=auto"
+alias prf='sudo mvim ~/.profile'
+alias srl='source ~/.profile && echo shell reloaded'
+alias psg='ps aux | grep' #Checking for processes made easy
+alias ulct='/usr/libexec/locate.updatedb' #Updates the 'locate' database on command.  This should happen automatically, but JIC.
 
-alias ws="cd ~/workspace"
-alias haw="cd ~/workspace/howaboutwe"
-alias coup="cd ~/workspace/couples"
-alias cdc="cd ~/workspace/couples"
+# memcache
+alias memgo='memcached -d -p 22212'
+alias memst='memcached --stop'
+
+# haw
 alias cda="cd ~/workspace/couples-api"
+alias cdc="cd ~/workspace/couples"
 alias cdm="cd ~/workspace/couples-models"
+alias haw="cd ~/workspace/howaboutwe"
+alias ws="cd ~/workspace"
 
-alias u="bundle exec unicorn_rails -p 3000 -D"
-
-alias reset-authors="git commit --amend --reset-author -C head"
-
+# git
+alias gac='git add -A; git commit -m'
+alias gb="git branch"
 alias gco="git checkout"
-alias gap="git add -p"
+alias gcom='gco master'
 alias gd="git diff"
 alias gdc="git diff --cached"
-alias gst="git status"
-alias gc="git commit --verbose"
+alias ggn='git grep -n'
+alias gl='git log'
 alias gp="git push"
-alias gpr="git pull --rebase"
 alias gpf="git push -f"
-alias gb="git branch"
+alias gpo='git push origin'
+alias gpr="git pull --rebase"
+alias gra="git commit --amend --reset-author -C head"
+alias gs='git status -s'
+alias gst="git status"
 
+# make pushing to heroku easy
+alias gph='git push heroku master'
+
+# capistrano stuff
+# Deploys whatever branch you're currently in to staging.  The 'sed' command at the end strips out the leading space from the 'cut' command
+alias cds='cap staging deploy'
+alias cdp='cap production deploy'
+
+# postgres
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
