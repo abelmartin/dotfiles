@@ -28,13 +28,17 @@ alias memst='memcached --stop'
 # haw
 alias cda="cd ~/workspace/couples-api"
 alias cdc="cd ~/workspace/couples"
+alias cdc2="cd ~/workspace/couples2"
 alias cdm="cd ~/workspace/couples-models"
 alias haw="cd ~/workspace/howaboutwe"
 alias ws="cd ~/workspace"
+alias srv="cd ~/workspace/servers"
 
 # git
 alias gac='git add -A; git commit -m'
 alias gb="git branch"
+# See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
+alias gbv="git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate) %(authorname) %(refname:short)'"
 alias gco="git checkout"
 alias gcom='gco master'
 alias gd="git diff"
