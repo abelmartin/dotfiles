@@ -21,6 +21,7 @@ set nohlsearch " disable long term highlighting for searches
 set scrolloff=3
 
 set cursorline " highlight current line
+set cursorcolumn " highlight current column
 set hidden " allow unsaved buffers
 
 set guifont=Monaco:h12 
