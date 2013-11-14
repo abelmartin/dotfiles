@@ -27,7 +27,7 @@ function utar
 #If I'm just commiting before pushing the code up, I want to do all of it in 1 action.
 function gacp()
 {
-  git add -A; 
+  git add -A;
   git commit -m "$1";
   git push;
 }
@@ -36,6 +36,12 @@ function gacp()
 function gdt()
 {
   git push origin :refs/tags/$1;
+}
+
+function gpa()
+{
+  gp
+  gph
 }
 
 #export MAGICK_HOME="/usr/local"
