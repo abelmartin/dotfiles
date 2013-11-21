@@ -35,6 +35,8 @@ alias srv="cd ~/workspace/servers"
 # git
 alias gac='git add -A; git commit -m'
 alias gb="git branch"
+alias gri='git rebase -i'
+alias grm='git rebase master'
 
 # See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 alias gbv="git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate) %(authorname) %(refname:short)'"
