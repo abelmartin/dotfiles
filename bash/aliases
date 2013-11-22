@@ -38,6 +38,10 @@ alias gb="git branch"
 alias gri='git rebase -i'
 alias grm='git rebase master'
 
+# rails
+alias kit='bundle && rake db:migrate db:test:prepare'
+alias kab='bundle && rake db:migrate db:test:prepare default'
+
 # See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 alias gbv="git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate) %(authorname) %(refname:short)'"
 alias gco="git checkout"
