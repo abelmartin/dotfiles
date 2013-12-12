@@ -32,15 +32,15 @@ alias cdc="cd ~/workspace/couples"
 alias cdc2="cd ~/workspace/couples2"
 alias srv="cd ~/workspace/servers"
 
+# rails
+alias kit='bundle && rake db:migrate db:test:prepare'
+alias kab='bundle && rake db:migrate db:test:prepare default'
+
 # git
 alias gac='git add -A; git commit -m'
 alias gb="git branch"
 alias gri='git rebase -i'
 alias grm='git rebase master'
-
-# rails
-alias kit='bundle && rake db:migrate db:test:prepare'
-alias kab='bundle && rake db:migrate db:test:prepare default'
 
 # See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 alias gbv="git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate) %(authorname) %(refname:short)'"
@@ -51,6 +51,7 @@ alias gdc="git diff --cached"
 alias ggn='git grep -n'
 alias gl='git log'
 alias gp="git push"
+alias gpu="git push -u origin head"
 alias gpf="git push -f"
 alias gpo='git push origin'
 alias gpr="git pull --rebase"
