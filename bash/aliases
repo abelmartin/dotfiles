@@ -54,8 +54,7 @@ alias gp="git push"
 alias gpf="git push -f"
 alias gpo='git push origin'
 alias gpr="git pull --rebase"
-alias gra="git commit --amend --reset-author -C head"
-alias gs='git status -s'
+alias gca="git commit --amend -aC head"
 alias gst="git status"
 
 # make pushing to heroku easy
