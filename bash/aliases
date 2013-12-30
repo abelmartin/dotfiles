@@ -33,8 +33,9 @@ alias cdc2="cd ~/workspace/couples2"
 alias srv="cd ~/workspace/servers"
 
 # rails
+alias rdr='rake db:rebuild'
 alias kit='bundle && rake db:migrate db:test:prepare'
-alias kab='bundle && rake db:migrate db:test:prepare default'
+alias kab='bundle && rake db:rebuild && rake'
 
 # git
 alias gac='git add -A; git commit -m'
