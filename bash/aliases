@@ -33,6 +33,7 @@ alias cdc2="cd ~/workspace/couples2"
 alias srv="cd ~/workspace/servers"
 
 # rails
+alias be='bundle exec'
 alias rdr='rake db:rebuild'
 alias kit='bundle && rake db:migrate db:test:prepare'
 alias kab='bundle && rake db:rebuild && rake'
