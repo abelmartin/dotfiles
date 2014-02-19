@@ -34,9 +34,8 @@ alias srv="cd ~/workspace/servers"
 
 # rails
 alias be='bundle exec'
-alias rdr='rake db:rebuild'
 alias kit='bundle && rake db:migrate db:test:prepare'
-alias kab='bundle && rake db:rebuild && rake'
+alias kab='bundle && rake db:rebuild'
 
 # git
 alias gac='git add -A; git commit -m'
