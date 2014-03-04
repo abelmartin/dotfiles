@@ -36,6 +36,7 @@ alias srv="cd ~/workspace/servers"
 alias be='bundle exec'
 alias kit='bundle && rake db:migrate db:test:prepare'
 alias kab='bundle && rake db:rebuild'
+alias rdg='rake docs:generate'
 
 # git
 alias gac='git add -A; git commit -m'
@@ -47,6 +48,7 @@ alias gdh='git diff head^'
 # See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 alias gbv="git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate) %(authorname) %(refname:short)'"
 alias gco="git checkout"
+alias gcob='gco -b'
 alias gcom='gco master'
 alias gd="git diff"
 alias gdc="git diff --cached"
