@@ -36,7 +36,8 @@ alias srv="cd ~/workspace/servers"
 alias be='bundle exec'
 alias kit='bundle && rake db:migrate db:test:prepare'
 alias kab='bundle && rake db:rebuild'
-alias rdg='rake docs:generate'
+alias docl='rake docs:generate'
+alias docp='cap staging deploy:fetch_documentation'
 
 # git
 alias gac='git add -A; git commit -m'
