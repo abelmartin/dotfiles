@@ -67,9 +67,9 @@ alias gst="git status -sb"
 alias gph='git push heroku master'
 
 # capistrano stuff
-# Deploys whatever branch you're currently in to staging.  The 'sed' command at the end strips out the leading space from the 'cut' command
-alias cds='cap staging deploy'
-alias cdp='cap production deploy'
+# Deploys whatever branch you're currently in to staging.
+alias csd='cap staging deploy'
+alias cpd='cap production deploy'
 
 # postgres
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
