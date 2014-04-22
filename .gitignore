@@ -25,3 +25,6 @@ vendor/gems/webrat*
 *.pem
 public/assets/*
 vim/.netrwhist
+'sublime_text_3/Packages/User/Package Control.cache/*'
+'sublime_text_3/Packages/User/Package Control.last-run'
+'sublime_text_3/Packages/User/Package Control.system-ca-bundle'
