@@ -26,18 +26,15 @@ alias ip='ifconfig|grep broadcast'
 alias memgo='memcached -d'
 alias memst='memcached --stop'
 
-# haw
-alias ws="cd ~/workspace"
-alias cdc="cd ~/workspace/couples"
-alias cdc2="cd ~/workspace/couples2"
-alias srv="cd ~/workspace/servers"
+#pry
+##Open pry with Sinatra app environment loaded on start
+alias prys='pry -r ./config/environment.rb'
 
 # rails
 alias be='bundle exec'
 alias kit='bundle && rake db:migrate db:test:prepare'
 alias kab='bundle && rake db:rebuild'
-alias docl='rake docs:generate'
-alias docp='cap staging deploy:fetch_documentation'
+alias db="script/dbconsole"
 
 # git
 alias gac='git add -A; git commit -m'
@@ -75,5 +72,3 @@ alias cpd='cap production deploy'
 # postgres
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
-alias db="script/dbconsole"
