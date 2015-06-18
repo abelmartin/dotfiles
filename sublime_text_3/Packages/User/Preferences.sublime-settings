@@ -1,18 +1,31 @@
 {
-	"font_size": 20,
-	"ignored_packages": [ "Vintage" ],
-	"rulers": [ 80 ],
-	"show_full_path": true,
-	"tab_size": 2,
-	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-  "ensure_newline_at_eof_on_save": true,
-	"folder_exclude_patterns": [
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.log",
+		"*.min.js"
+	],
+	"folder_exclude_patterns":
+	[
 		"tmp",
 		".git",
 		"app/assets/*/vendor",
 		".bundle",
-		"head"
+		"head",
+		"coverage"
 	],
-	"file_exclude_patterns": ["*.log", "*.min.js"]
+	"font_size": 17,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"show_full_path": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }

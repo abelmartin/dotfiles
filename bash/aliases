@@ -20,7 +20,8 @@ alias prf='sudo mvim ~/.profile'
 alias srl='source ~/.profile && echo shell reloaded'
 alias psg='ps aux | grep' #Checking for processes made easy
 alias ulct='/usr/libexec/locate.updatedb' #Updates the 'locate' database on command.  This should happen automatically, but JIC.
-alias ip='ifconfig|grep broadcast'
+alias ip='ifconfig|grep broadcast|cut -f 2 -d " "'
+alias ipc='ifconfig|grep broadcast|cut -f 2 -d " "|pbcopy'
 
 # memcache
 alias memgo='memcached -d'
@@ -39,6 +40,7 @@ alias db="script/dbconsole"
 # git
 alias gac='git add -A; git commit -m'
 alias gb="git branch"
+alias gbd="git branch -D"
 alias gri='git rebase -i'
 alias grm='git rebase master'
 alias gdh='git diff head^'
@@ -48,6 +50,7 @@ alias gbv="git for-each-ref --sort=-committerdate refs/heads/ --format='%(commit
 alias gco="git checkout"
 alias gcob='gco -b'
 alias gcom='gco master'
+alias gcod='gco develop'
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias ggn='git grep -n'
