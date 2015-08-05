@@ -5,13 +5,19 @@ fi
 # Display the current git branch that you're working on.
 export PS1='\[\033[00;35m\]\w\[\033[00m\][\d | \t]\[\033[01;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s`\[\033[00m\]$ '
 
+function gbda
+{
+  git branch -D $1
+  git push origin --delete $1
+}
+
 # Untaring.  I hate forgetting this command.  now I won't. :)
 function utar
 {
   dest='./'
-  if [ $2 ] ; then 
+  if [ $2 ] ; then
     dest="$2"
-    if [ -d $dest ]; then 
+    if [ -d $dest ]; then
       echo "DIRECTORY $dest EXISTS"
     else
       echo "CREATING DIRECTORY $dest"
@@ -49,6 +55,11 @@ function gpa()
 export NODE_PATH=/usr/local/lib/node_modules
 
 
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+#export PATH=$PATH:/usr/local/opt/go/bin
+#export GOPATH=/usr/local/opt/go/bin
+#export GOBIN=/usr/local/opt/go/bin
