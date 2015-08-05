@@ -1,3 +1,6 @@
+# brew things
+alias pgs='postgres -D /usr/local/var/postgres &'
+
 # apache
 alias apars='sudo apachectl graceful' #Graceful Apache restart
 alias apast='sudo apachectl stop'
