@@ -34,7 +34,11 @@ alias prys='pry -r ./config/environment.rb'
 alias be='bundle exec'
 alias kit='bundle && rake db:migrate db:test:prepare'
 alias kab='bundle && rake db:rebuild'
-alias db="script/dbconsole"
+alias db='rails dbconsole'
+alias dbm='rake db:migrate'
+alias dbt='rake db:migrate RAILS_ENV=test'
+alias dba='rake db:migrate && rake db:migrate RAILS_ENV=test'
+alias dbr='rake db:rollback && rake db:rollback RAILS_ENV=test'
 
 # git
 alias gac='git add -A; git commit -m'
