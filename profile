@@ -52,9 +52,7 @@ function gpa()
 
 #export MAGICK_HOME="/usr/local"
 #PATH=/opt/local/bin:/opt/local/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mongodb/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/rvm/bin
-export NODE_PATH=/usr/local/lib/node_modules
-
-
+#export NODE_PATH=/usr/local/lib/node_modules
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
