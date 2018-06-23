@@ -73,6 +73,7 @@ alias gst="git status -sb"
 
 # make pushing to heroku easy
 alias gph='git push heroku master'
+alias gpb='git push && git push beta'
 
 # capistrano stuff
 # Deploys whatever branch you're currently in to staging.
@@ -82,3 +83,6 @@ alias cpd='cap production deploy'
 # postgres
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
+# reek
+alias rks="reek -s"
