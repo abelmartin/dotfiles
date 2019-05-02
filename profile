@@ -55,6 +55,11 @@ function gpa()
   gph
 }
 
+function ww()
+{
+  curl 'http://wttr.in/Washington+DC'
+}
+
 #export MAGICK_HOME="/usr/local"
 #PATH=/opt/local/bin:/opt/local/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mongodb/bin:/opt/local/bin:/usr/local/git/bin:/usr/local/rvm/bin
 #export NODE_PATH=/usr/local/lib/node_modules
@@ -69,3 +74,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #export PATH=$PATH:/usr/local/opt/go/bin
 #export GOPATH=/usr/local/opt/go/bin
 #export GOBIN=/usr/local/opt/go/bin
+
+export NVM_DIR="/Users/abel/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
