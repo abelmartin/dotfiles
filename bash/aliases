@@ -73,7 +73,9 @@ alias gst="git status -sb"
 
 # make pushing to heroku easy
 alias gph='git push heroku master'
-alias gpb='git push && git push beta'
+alias gpb='git push && git push bitbucket master'
+alias gpa='git push && git push bitbucket master && git push heroku master'
+#alias gpb='git push && git push beta'
 
 # capistrano stuff
 # Deploys whatever branch you're currently in to staging.
