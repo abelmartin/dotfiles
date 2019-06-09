@@ -1,3 +1,8 @@
+# vpn
+alias vpn='sudo openconnect vpn-001.us-east.optoro.io -uamartin -b'
+alias vpna='sudo openconnect vpn-001.us-east.optoro.io -uamartin -b --script ~/vpnc-script-all'
+alias vpnp='lpass show vpn'
+
 # brew things
 alias pgs='postgres -D /usr/local/var/postgres &'
 
@@ -25,6 +30,7 @@ alias psg='ps aux | grep' #Checking for processes made easy
 alias ulct='/usr/libexec/locate.updatedb' #Updates the 'locate' database on command.  This should happen automatically, but JIC.
 alias ip='ifconfig|grep broadcast|cut -f 2 -d " "'
 alias ipc='ifconfig|grep broadcast|cut -f 2 -d " "|pbcopy'
+alias pingg='ping google.com'
 
 # memcache
 alias memgo='memcached -d'
@@ -45,24 +51,23 @@ alias dba='rake db:migrate && rake db:migrate RAILS_ENV=test'
 alias dbr='rake db:rollback && rake db:rollback RAILS_ENV=test'
 
 # git
-alias gac='git add -A; git commit -m'
+alias gd="git diff"
+alias gl='git log'
+alias gp="git push"
 alias gb="git branch"
+alias gac='git add -A; git commit -m'
 alias gbd="git branch -D"
 alias gri='git rebase -i'
 alias grm='git rebase master'
 alias gdh='git diff head^'
+alias gpl='git pull'
 
 # See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 alias gbv="git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate) %(authorname) %(refname:short)'"
 alias gco="git checkout"
 alias gcob='gco -b'
-alias gcom='gco master'
-alias gcod='gco develop'
-alias gd="git diff"
 alias gdc="git diff --cached"
 alias ggn='git grep -n'
-alias gl='git log'
-alias gp="git push"
 alias gpu="git push -u origin head"
 alias gpf="git push -f"
 alias gpo='git push origin'
@@ -70,6 +75,8 @@ alias gpr="git pull --rebase"
 alias gpk='`gpr` `kit`'
 alias gca="git commit --amend -aC head"
 alias gst="git status -sb"
+alias gcom='gco master'
+alias gcod='gco develop'
 
 # make pushing to heroku easy
 alias gph='git push heroku master'
@@ -85,6 +92,9 @@ alias cpd='cap production deploy'
 # postgres
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
+# RuboCop
+alias rubo="rubocop"
 
 # reek
 alias rks="reek -s"

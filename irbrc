@@ -16,8 +16,8 @@ if defined? Bundler
 end
 
 # Now that we're out of "jali", we can require other gems
-require 'rubygems'
-require 'wirb'
+# require 'rubygems'
+# require 'wirb'
 require 'pp'
 require 'awesome_print'
 #require 'csv'

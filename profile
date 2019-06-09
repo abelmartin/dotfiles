@@ -30,6 +30,11 @@ function utar
   echo "UNTARRED $1 INTO $dest"
 }
 
+function ttar()
+{
+  tar -zcvf $1.tar.gz ./$1/
+}
+
 #If I'm just commiting before pushing the code up, I want to do all of it in 1 action.
 function gacp()
 {
@@ -62,6 +67,9 @@ function ww()
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# For experimental hammer stuff.
+# export PATH="$HOME/dev/mc-hammer/bin:$PATH"
 
 #export PATH=$PATH:/usr/local/opt/go/bin
 #export GOPATH=/usr/local/opt/go/bin
