@@ -1,4 +1,4 @@
-EDITOR="vi -N"
+EDITOR="vim"
 VISUAL=$EDITOR
 PS1='\u@\h:\w$(__git_ps1 "(%s)")\$ '
 GIT_PS1_SHOWDIRTYSTATE=true
