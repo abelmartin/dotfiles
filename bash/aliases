@@ -31,6 +31,7 @@ alias ulct='/usr/libexec/locate.updatedb' #Updates the 'locate' database on comm
 alias ip='ifconfig|grep broadcast|cut -f 2 -d " "'
 alias ipc='ifconfig|grep broadcast|cut -f 2 -d " "|pbcopy'
 alias pingg='ping google.com'
+alias port='sudo lsof -iTCP -sTCP:LISTEN -n -P'
 
 # memcache
 alias memgo='memcached -d'
