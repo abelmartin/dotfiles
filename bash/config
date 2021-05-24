@@ -1,9 +1,9 @@
 EDITOR="vim"
 VISUAL=$EDITOR
-PS1='\u@\h:\w$(__git_ps1 "(%s)")\$ '
-GIT_PS1_SHOWDIRTYSTATE=true
+# PS1='\u@\h:\w$(__git_ps1 "(%s)")\$ '
+# GIT_PS1_SHOWDIRTYSTATE=true
 PATH=/usr/local/bin:/bin:/usr/bin:/opt/local/bin:/opt/local/sbin:/sbin:/usr/sbin:/usr/local/sbin:/usr/X11/bin:~/bin:/opt/local/lib/postgresql84/bin:/usr/local/mysql/bin
 
-export EDITOR VISUAL GIT_PS1_SHOWDIRTYSTATE PS1 PATH
+# export EDITOR VISUAL GIT_PS1_SHOWDIRTYSTATE PS1 PATH
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.

@@ -61,7 +61,7 @@ alias gbd="git branch -D"
 alias gri='git rebase -i'
 alias grm='git rebase master'
 alias gdh='git diff head^'
-alias gpl='git pull'
+alias pull='git pull'
 
 # See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 alias gbv="git for-each-ref --sort=-committerdate refs/heads/ --format='%(committerdate) %(authorname) %(refname:short)'"
@@ -95,7 +95,10 @@ alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/ser
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # RuboCop
-alias rubo="bundle exec rubocop"
+alias rubo="bundle exec rubocop -a"
 
 # reek
 alias rks="reek -s"
+
+# simple command to prove the aliases loaded
+alias works="echo 'WORKS'"

@@ -1,9 +1,11 @@
+. ~/.bash_profile
+
 if [ -f ~/.profile_private ]; then
   source ~/.profile_private
 fi
 
 # Display the current git branch that you're working on.
-export PS1='\[\033[00;35m\]\w\[\033[00m\][\d | \t]\[\033[01;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s`\[\033[00m\]$ '
+# export PS1='\[\033[00;35m\]\w\[\033[00m\][\d | \t]\[\033[01;33m\]`git branch 2>/dev/null|cut -f2 -d\* -s`\[\033[00m\]$ '
 
 function gbda
 {
@@ -57,7 +59,7 @@ function gpa()
 
 function ww()
 {
-  curl 'http://wttr.in/Washington+DC'
+  curl 'http://wttr.in/Beltsville-MD'
 }
 
 #export MAGICK_HOME="/usr/local"
@@ -68,12 +70,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# For experimental hammer stuff.
-# export PATH="$HOME/dev/mc-hammer/bin:$PATH"
-
-#export PATH=$PATH:/usr/local/opt/go/bin
-#export GOPATH=/usr/local/opt/go/bin
-#export GOBIN=/usr/local/opt/go/bin
-
-export NVM_DIR="/Users/abel/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

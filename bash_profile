@@ -1,9 +1,9 @@
-. ~/.bash/completion/git-completion.bash
+# . ~/.bash/completion/git-completion.bash
 . ~/.bash/aliases
 . ~/.bash/config
 
 test -f ~/.localrc  && . ~/.localrc
-. ~/.profile
+# . ~/.profile
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
