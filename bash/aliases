@@ -60,7 +60,7 @@ alias gac='git add -A; git commit -m'
 alias gbd="git branch -D"
 alias gri='git rebase -i'
 alias grm='git rebase master'
-alias gdh='git diff head^'
+alias gdh='git diff head~1'
 alias pull='git pull'
 
 # See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
