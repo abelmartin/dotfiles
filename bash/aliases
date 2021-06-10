@@ -43,13 +43,14 @@ alias prys='pry -r ./config/environment.rb'
 
 # rails
 alias be='bundle exec'
-alias kit='bundle && rake db:migrate db:test:prepare'
-alias kab='bundle && rake db:rebuild'
-alias db='rails dbconsole'
-alias dbm='rake db:migrate'
-alias dbt='rake db:migrate RAILS_ENV=test'
-alias dba='rake db:migrate && rake db:migrate RAILS_ENV=test'
-alias dbr='rake db:rollback && rake db:rollback RAILS_ENV=test'
+alias kit='bundle && be rake db:migrate db:test:prepare'
+alias kab='bundle && be rake db:rebuild'
+alias db='be rails dbconsole'
+alias dbm='be rake db:migrate'
+alias dbt='be rake db:migrate RAILS_ENV=test'
+alias dba='be rake db:migrate && rake db:migrate RAILS_ENV=test'
+alias dbr='be rake db:rollback && rake db:rollback RAILS_ENV=test'
+alias rc='be rails console'
 
 # git
 alias gd="git diff"
