@@ -43,6 +43,7 @@ alias prys='pry -r ./config/environment.rb'
 
 # rails
 alias be='bundle exec'
+alias ber='bundle exec rspec'
 alias kit='bundle && be rake db:migrate db:test:prepare'
 alias kab='bundle && be rake db:rebuild'
 alias db='be rails dbconsole'
@@ -51,6 +52,8 @@ alias dbt='be rake db:migrate RAILS_ENV=test'
 alias dba='be rake db:migrate && rake db:migrate RAILS_ENV=test'
 alias dbr='be rake db:rollback && rake db:rollback RAILS_ENV=test'
 alias rc='be rails console'
+alias rs='bin/server'
+alias tl='tail -f log/development.log'
 
 # git
 alias gd="git diff"
@@ -103,3 +106,6 @@ alias rks="reek -s"
 
 # simple command to prove the aliases loaded
 alias works="echo 'WORKS'"
+
+# Speedtest CLI
+alias speed="speedtest"
