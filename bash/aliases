@@ -44,7 +44,9 @@ alias prys='pry -r ./config/environment.rb'
 # rails
 alias be='bundle exec'
 alias ber='bundle exec rspec'
-alias kit='bundle && be rake db:migrate db:test:prepare'
+alias kit='bundle && be rake db:migrate && be rake db:migrate RAILS_ENV=test'
+alias mig='be rake db:migrate && be rake db:migrate RAILS_ENV=test'
+alias mit='be rake db:migrate RAILS_ENV=test'
 alias kab='bundle && be rake db:rebuild'
 alias db='be rails dbconsole'
 alias dbm='be rake db:migrate'
@@ -80,7 +82,7 @@ alias gpr="git pull --rebase"
 alias gpk='`gpr` `kit`'
 alias gca="git commit --amend -aC head"
 alias gst="git status -sb"
-alias gcom='gco master'
+alias gcom='gco main'
 alias gcod='gco develop'
 
 # make pushing to heroku easy
