@@ -52,8 +52,9 @@ alias dbt='be rake db:migrate RAILS_ENV=test'
 alias dba='be rake db:migrate && rake db:migrate RAILS_ENV=test'
 alias dbr='be rake db:rollback && rake db:rollback RAILS_ENV=test'
 alias rc='be rails console'
-alias rs='bin/server'
+alias rs='be rails server'
 alias tl='tail -f log/development.log'
+alias fff='foreman -f Procfile.dev'
 
 # git
 alias gd="git diff"
