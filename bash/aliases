@@ -56,17 +56,18 @@ alias dbr='be rake db:rollback && rake db:rollback RAILS_ENV=test'
 alias rc='be rails console'
 alias rs='be rails server'
 alias tl='tail -f log/development.log'
-alias fff='foreman -f Procfile.dev'
+alias fff='foreman start -f Procfile.dev'
 
 # git
 alias gd="git diff"
+alias gdm="git diff main"
 alias gl='git log'
 alias gp="git push"
 alias gb="git branch"
 alias gac='git add -A; git commit -m'
 alias gbd="git branch -D"
 alias gri='git rebase -i'
-alias grm='git rebase master'
+alias grm='git rebase main'
 alias gdh='git diff head~1'
 alias pull='git pull'
 
@@ -87,7 +88,7 @@ alias gcom='gco main'
 alias gcod='gco develop'
 
 # make pushing to heroku easy
-alias gph='git push heroku master'
+alias gph='git push heroku main'
 alias gpb='git push && git push bitbucket master'
 alias gpa='git push && git push bitbucket master && git push heroku master'
 #alias gpb='git push && git push beta'
