@@ -79,3 +79,4 @@ eval "$(rbenv init -)"
 if [ -f ~/.profile_private ]; then
   source ~/.profile_private
 fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
