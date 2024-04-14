@@ -58,6 +58,9 @@ alias rs='be rails server'
 alias tl='tail -f log/development.log'
 alias fff='foreman start -f Procfile.dev'
 
+# cucumber
+alias cuke='be cucumber'
+
 # git
 alias gd="git diff"
 alias gdm="git diff main"
