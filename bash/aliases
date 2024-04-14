@@ -44,34 +44,34 @@ alias prys='pry -r ./config/environment.rb'
 # rails
 alias be='bundle exec'
 alias ber='bundle exec rspec'
+alias db='be rails dbconsole'
+alias dba='be rake db:migrate && rake db:migrate RAILS_ENV=test'
+alias dbm='be rake db:migrate'
+alias dbr='be rake db:rollback && rake db:rollback RAILS_ENV=test'
+alias dbt='be rake db:migrate RAILS_ENV=test'
+alias kab='bundle && be rake db:rebuild'
 alias kit='bundle && be rake db:migrate && be rake db:migrate RAILS_ENV=test'
 alias mig='be rake db:migrate && be rake db:migrate RAILS_ENV=test'
 alias mit='be rake db:migrate RAILS_ENV=test'
-alias kab='bundle && be rake db:rebuild'
-alias db='be rails dbconsole'
-alias dbm='be rake db:migrate'
-alias dbt='be rake db:migrate RAILS_ENV=test'
-alias dba='be rake db:migrate && rake db:migrate RAILS_ENV=test'
-alias dbr='be rake db:rollback && rake db:rollback RAILS_ENV=test'
 alias rc='be rails console'
-alias rs='be rails server'
+alias rs='foreman start -f Procfile.dev'
+alias rubo="bundle exec rubocop -a"
 alias tl='tail -f log/development.log'
-alias fff='foreman start -f Procfile.dev'
 
 # cucumber
 alias cuke='be cucumber'
 
 # git
+alias gac='git add -A; git commit -m'
+alias gb="git branch"
+alias gbd="git branch -D"
 alias gd="git diff"
+alias gdh='git diff head~1'
 alias gdm="git diff main"
 alias gl='git log'
 alias gp="git push"
-alias gb="git branch"
-alias gac='git add -A; git commit -m'
-alias gbd="git branch -D"
 alias gri='git rebase -i'
 alias grm='git rebase main'
-alias gdh='git diff head~1'
 alias pull='git pull'
 
 # See http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
