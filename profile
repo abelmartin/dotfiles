@@ -66,16 +66,18 @@ function ww()
 #PATH=/opt/local/bin:/opt/local/bin:/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mongodb/bin:/opt/local/bin:/usr/local/git/bin
 #export NODE_PATH=/usr/local/lib/node_modules
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin" # Add Postgresql App to PATH for actions
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 if [ -f ~/.profile_private ]; then
   source ~/.profile_private
 fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
