@@ -99,7 +99,8 @@ alias gpa='git push && git push bitbucket master && git push heroku master'
 # capistrano stuff
 # Deploys whatever branch you're currently in to staging.
 alias csd='cap staging deploy'
-alias cpd='cap production deploy'
+alias cpd='cap production deploy --trace'
+alias capt='bundle exec cap -T'
 
 # postgres
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
@@ -116,3 +117,34 @@ alias works="echo 'WORKS'"
 
 # Speedtest CLI
 alias speed="speedtest"
+
+## DOCKER things:
+alias dc="docker compose"
+
+# Runs whatever follows from within a web container.
+# The --rm option automatically destroys the container after the command exits
+# e.g. $ dcr ./bin/verify
+alias dcr="dc run --rm web"
+
+# Opens a bash session from within a web container, useful for debugging
+alias dcshell="dcr /bin/bash"
+
+# Runs rubocop
+alias dcru="dcr rubocop -a"
+
+# Resets the database
+alias dbreset="dcr bundle exec rails db:reset"
+
+# Build images before starting containers.
+alias dcb="dc build"
+
+# Detached mode: Run containers in the background
+alias dcu="dc up --detach"
+
+# If running detached, follow logs for all containers
+alias dcl="dc logs --follow"
+
+# If running detached, stop and remove containers, networks
+alias dcd="dc down"
+alias dcrb="dcd && dc up --build --detach"
+alias rcc="dcr rails c"
