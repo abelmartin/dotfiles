@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define an array of symlink paths
-SYMSOURCES=("ackrc" "bash" "bash_profile" "bashrc" "inputrc" "zprofile")
+SYMSOURCES=("ackrc" "bash" "bash_profile" "bashrc" "inputrc" "zprofile" "zshrc")
 
 # Iterate over each symlink path in the array
 for SOURCE in "${SYMSOURCES[@]}"; do

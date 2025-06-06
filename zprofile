@@ -75,9 +75,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # export PATH="$HOME/.rbenv/bin:$PATH"
+
+# export PATH="/opt/homebrew/bin/rbenv:$PATH"
+# echo `rbenv -v`
 # eval "$(rbenv init -)"
 
 if [ -f ~/.profile_private ]; then
   source ~/.profile_private
 fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# echo "DONE!"
