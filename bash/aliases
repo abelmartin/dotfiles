@@ -148,3 +148,6 @@ alias dcl="dc logs --follow"
 alias dcd="dc down"
 alias dcrb="dcd && dc up --build --detach"
 alias rcc="dcr rails c"
+
+# Let's dribble the containers
+alias dcrr="dcd && dcu"
