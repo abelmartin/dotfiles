@@ -86,3 +86,35 @@ fi
 eval "$(/opt/homebrew/bin/brew shellenv)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # echo "DONE!"
+
+# That Docker heat!
+function cyd(){
+  echo "==== CYD ===="
+  echo "==== Stopping & Removing all containers ===="
+  docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
+  echo "==== Image & Container pruning ===="
+  docker image prune -af && docker container prune -f
+  echo "==== Removing dangling volumes ===="
+  docker volume rm $(docker volume ls -qf dangling=true)
+  echo "==== Removing all volumes ===="
+  docker volume rm $(docker volume ls -qf)
+  echo "==== Removing all networks ===="
+  docker network rm $(docker network ls -q)
+  echo "==== Removing all images ===="
+  docker rmi $(docker images -q)
+  echo "==== Removing all build cache ===="
+  docker builder prune -af
+  echo "==== CYD DONE ===="
+}
+
+function cyd-one-line(){
+  docker stop $(docker ps -aq) && docker rm $(docker ps -aq) &&  docker image prune -af && docker container prune -f &&  docker volume rm $(docker volume ls -qf dangling=true) &&  docker volume rm $(docker volume ls -qf) &&  docker network rm $(docker network ls -q) &&  docker rmi $(docker images -q) &&  docker builder prune -af
+}
+
+function dcrr(){
+  echo "==== BOUNCING THE CONTAINERS ===="
+  dc down
+  dc build
+  dc up --detach
+  echo "==== CONTAINERS BOUNCED ===="
+}
